@@ -8,10 +8,7 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/lambda-hj/codeplugins",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lambda-hj/codeplugins.git"
-  },
+  "repository": "https://github.com/lambda-hj/codeplugins.git",
   "keywords": ["claude-code", "plugin", "workflow", "development"],
   "engines": {
     "claude-code": ">=1.0.0"

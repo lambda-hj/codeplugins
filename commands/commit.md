@@ -1,9 +1,21 @@
 ---
 description: "API 文档生成：解析接口代码，比对并更新 docs/api.md"
-argument-hint: "[code-path ...]（支持 @file 引用多个文件）"
+argument-hint: [optional context...]
+allowed-tools: Bash(git diff:*)
 ---
 
-Your task is to help the user to generate a commit message and commit the changes using git..
+# Task: Generate a Conventional Commit Message
+
+Based on the following code changes, please generate a concise and descriptive commit message that follows the Conventional Commits specification.
+
+Provide only the commit message itself, without any introduction or explanation.
+
+## Staged Changes:
+!git diff --cached
+
+
+## Unstaged Changes:
+!git diff
 
 ## Output Format
 
@@ -29,17 +41,17 @@ Your task is to help the user to generate a commit message and commit the change
 
 | Type     | Emoji | Description          | Example Scopes      |
 | -------- | ----- | -------------------- | ------------------- |
-| feat     | ✨    | New feature          | user, payment       |
-| fix      | 🐛    | Bug fix              | auth, data          |
-| docs     | 📝    | Documentation        | README, API         |
-| style    | 💄    | Code style           | formatting          |
-| refactor | ♻️    | Code refactoring     | utils, helpers      |
-| perf     | ⚡️   | Performance          | query, cache        |
-| test     | ✅    | Testing              | unit, e2e           |
-| build    | 📦    | Build system         | webpack, npm        |
-| ci       | 👷    | CI config            | Travis, Jenkins     |
-| chore    | 🔧    | Other changes        | scripts, config     |
-| i18n     | 🌐    | Internationalization | locale, translation |
+| feat     | ✨     | New feature          | user, payment       |
+| fix      | 🐛     | Bug fix              | auth, data          |
+| docs     | 📝     | Documentation        | README, API         |
+| style    | 💄     | Code style           | formatting          |
+| refactor | ♻️     | Code refactoring     | utils, helpers      |
+| perf     | ⚡️     | Performance          | query, cache        |
+| test     | ✅     | Testing              | unit, e2e           |
+| build    | 📦     | Build system         | webpack, npm        |
+| ci       | 👷     | CI config            | Travis, Jenkins     |
+| chore    | 🔧     | Other changes        | scripts, config     |
+| i18n     | 🌐     | Internationalization | locale, translation |
 
 ## Writing Rules
 
@@ -97,3 +109,6 @@ OUTPUT:
 - add environment variable port support for flexible deployment
 
 Remember: All output MUST be in English language. You are to act as a pure commit message generator. Your response should contain NOTHING but the commit message itself.
+
+## Optional User Context:
+$ARGUMENTS
