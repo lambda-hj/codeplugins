@@ -94,7 +94,8 @@
 ```
 codeplugins/
 ├── .claude-plugin/
-│   └── plugin.json          # 插件配置文件
+│   ├── plugin.json          # 插件配置文件
+│   └── marketplace.json     # 本地 Marketplace 定义
 ├── agents/                  # 自定义代理目录（预留）
 ├── commands/                # 自定义命令目录
 │   ├── apidoc.md           # API 文档生成命令
@@ -104,22 +105,46 @@ codeplugins/
 
 ## ⚙️ 配置
 
-插件配置位于 `.claude-plugin/plugin.json`：
+插件配置位于 `.claude-plugin/plugin.json`，Marketplace 定义位于 `.claude-plugin/marketplace.json`：
 
-```json
+```jsonc
+// plugin.json
 {
   "name": "code-workflow-assistant",
+  "displayName": "Code Workflow Assistant",
   "description": "代码工作流助手插件，提供自定义命令和代理来增强开发体验",
   "version": "1.0.0",
   "author": {
-    "name": "Developer",
-    "email": "dev@example.com"
+    "name": "lambda-hj",
+    "email": "lambda@example.com"
   },
   "license": "MIT",
   "keywords": ["claude-code", "plugin", "workflow", "development"],
   "engines": {
     "claude-code": ">=1.0.0"
-  }
+  },
+  "commands": [
+    "./commands/commit.md",
+    "./commands/apidoc.md"
+  ]
+}
+
+// marketplace.json
+{
+  "owner": "lambda-hj",
+  "id": "lambda-hj/codeplugins",
+  "displayName": "Code Workflow Plugins",
+  "description": "A collection of plugins to enhance code development workflow",
+  "plugins": [
+    {
+      "id": "code-workflow-assistant",
+      "displayName": "Code Workflow Assistant",
+      "source": {
+        "type": "local",
+        "path": "."
+      }
+    }
+  ]
 }
 ```
 

@@ -1,29 +1,16 @@
 {
-  "name": "lambda-hj-codeplugins",
+  "owner": "lambda-hj",
+  "id": "lambda-hj/codeplugins",
   "displayName": "Code Workflow Plugins",
   "description": "A collection of plugins to enhance code development workflow",
-  "version": "1.0.0",
-  "author": {
-    "name": "lambda-hj",
-    "email": "lambda@example.com"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/lambda-hj/codeplugins",
-  "repository": "https://github.com/lambda-hj/codeplugins.git",
-  "keywords": ["claude-code", "plugin", "workflow", "development", "code"],
-  "engines": {
-    "claude-code": ">=1.0.0"
-  },
   "plugins": [
     {
-      "name": "code-workflow-assistant",
-      "description": "代码工作流助手插件，提供自定义命令和代理来增强开发体验",
-      "version": "1.0.0",
-      "main": "./plugin.json",
-      "commands": [
-        "./commands/commit.md",
-        "./commands/apidoc.md"
-      ]
+      "id": "code-workflow-assistant",
+      "displayName": "Code Workflow Assistant",
+      "source": {
+        "type": "local",
+        "path": "."
+      }
     }
   ]
 }
