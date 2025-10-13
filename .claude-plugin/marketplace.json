@@ -1,16 +1,23 @@
 {
-  "owner": "lambda-hj",
-  "id": "lambda-hj/codeplugins",
-  "displayName": "Code Workflow Plugins",
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "code-workflow-plugins",
+  "version": "1.0.0",
   "description": "A collection of plugins to enhance code development workflow",
+  "owner": {
+    "name": "lambda-hj",
+    "email": "lambda@example.com"
+  },
   "plugins": [
     {
-      "id": "code-workflow-assistant",
-      "displayName": "Code Workflow Assistant",
-      "source": {
-        "type": "local",
-        "path": "."
-      }
+      "name": "code-workflow-assistant",
+      "description": "Code workflow assistant plugin with API documentation generation and smart commit commands",
+      "version": "1.0.0",
+      "author": {
+        "name": "lambda-hj",
+        "email": "lambda@example.com"
+      },
+      "source": ".",
+      "category": "productivity"
     }
   ]
 }
