@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "name": "code-workflow-assistant",
+      "name": "pilot",
       "description": "Code workflow assistant plugin with API documentation generation and smart commit commands",
       "version": "1.0.0",
       "author": {
