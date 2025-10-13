@@ -16,7 +16,7 @@
         "name": "lambda-hj",
         "email": "lambda@example.com"
       },
-      "source": ".",
+      "source": "./",
       "category": "productivity"
     }
   ]
