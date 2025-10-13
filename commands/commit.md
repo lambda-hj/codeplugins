@@ -1,21 +1,15 @@
 ---
-description: "API 文档生成：解析接口代码，比对并更新 docs/api.md"
-argument-hint: [optional context...]
-allowed-tools: Bash(git diff:*)
+description: "生成规范的git commit msg,并提交打码"
 ---
 
-# Task: Generate a Conventional Commit Message
+Your task is to help the user to generate a commit message and commit the changes using git.
 
-Based on the following code changes, please generate a concise and descriptive commit message that follows the Conventional Commits specification.
+## Guidelines
 
-Provide only the commit message itself, without any introduction or explanation.
-
-## Staged Changes:
-!git diff --cached
-
-
-## Unstaged Changes:
-!git diff
+- DO NOT add any ads such as "Generated with [Claude Code](https://claude.ai/code)"
+- Only generate the message for staged files/changes
+- Don't add any files using `git add`. The user will decide what to add. 
+- Follow the rules below for the commit message.
 
 ## Output Format
 
@@ -37,21 +31,21 @@ Provide only the commit message itself, without any introduction or explanation.
 ...
 ```
 
-## Type Reference
+### Type Reference
 
 | Type     | Emoji | Description          | Example Scopes      |
 | -------- | ----- | -------------------- | ------------------- |
-| feat     | ✨     | New feature          | user, payment       |
-| fix      | 🐛     | Bug fix              | auth, data          |
-| docs     | 📝     | Documentation        | README, API         |
-| style    | 💄     | Code style           | formatting          |
-| refactor | ♻️     | Code refactoring     | utils, helpers      |
-| perf     | ⚡️     | Performance          | query, cache        |
-| test     | ✅     | Testing              | unit, e2e           |
-| build    | 📦     | Build system         | webpack, npm        |
-| ci       | 👷     | CI config            | Travis, Jenkins     |
-| chore    | 🔧     | Other changes        | scripts, config     |
-| i18n     | 🌐     | Internationalization | locale, translation |
+| feat     | ✨    | New feature          | user, payment       |
+| fix      | 🐛    | Bug fix              | auth, data          |
+| docs     | 📝    | Documentation        | README, API         |
+| style    | 💄    | Code style           | formatting          |
+| refactor | ♻️    | Code refactoring     | utils, helpers      |
+| perf     | ⚡️   | Performance          | query, cache        |
+| test     | ✅    | Testing              | unit, e2e           |
+| build    | 📦    | Build system         | webpack, npm        |
+| ci       | 👷    | CI config            | Travis, Jenkins     |
+| chore    | 🔧    | Other changes        | scripts, config     |
+| i18n     | 🌐    | Internationalization | locale, translation |
 
 ## Writing Rules
 
@@ -66,26 +60,21 @@ Provide only the commit message itself, without any introduction or explanation.
 
 ### Body
 
+- Body must be in Chinese
 - Bullet points with "-"
 - Max 72 chars per line
 - Explain what and why
-- Must be in English
+- Must be in Chinese
 - Use【】for different types
 
 ## Critical Requirements
 
-1. Output ONLY the commit message
-2. Write ONLY in English
-3. NO additional text or explanations
-4. NO questions or comments
-5. NO formatting instructions or metadata
-
-## Guidelines
-
-- DO NOT add any ads such as "Generated with [Claude Code](https://claude.ai/code)"
-- Only generate the message for staged files/changes
-- Don't add any files using `git add`. The user will decide what to add. 
-- Follow the rules below for the commit message.
+1. NO additional text or explanations
+2. NO questions or comments
+3. NO formatting instructions or metadata
+4. DO NOT add any ads such as "Generated with [Claude Code](https://claude.ai/code)"
+5. Only generate the message for staged files/changes
+6. Don't add any files using `git add`. The user will decide what to add. 
 
 ## Examples
 
@@ -109,6 +98,3 @@ OUTPUT:
 - add environment variable port support for flexible deployment
 
 Remember: All output MUST be in English language. You are to act as a pure commit message generator. Your response should contain NOTHING but the commit message itself.
-
-## Optional User Context:
-$ARGUMENTS

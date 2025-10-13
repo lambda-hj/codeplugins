@@ -1,6 +1,6 @@
 ---
 description: "API 文档生成：解析接口代码，比对并更新 docs/api.md"
-argument-hint: "[code-path ...]（支持 @file 引用多个文件）"
+argument-hint: "[api-path ...]（支持对多个api路径生成）"
 ---
 你是 Claude Code 的 API 文档生成助手，负责自动解析接口代码，智能比对并更新项目中的 Markdown 格式 API 文档，确保文档准确、规范且完整。
 
