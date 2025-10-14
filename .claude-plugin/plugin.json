@@ -1,0 +1,19 @@
+{
+  "name": "code-workflow-assistant",
+  "version": "1.0.0",
+  "description": "代码工作流助手插件，提供自定义命令和代理来增强开发体验",
+  "author": {
+    "name": "lambda-hj",
+    "email": "lambda@example.com"
+  },
+  "license": "MIT",
+  "keywords": ["claude-code", "plugin", "workflow", "development", "mcp"],
+  "engines": {
+    "claude-code": ">=1.0.0"
+  },
+  "commands": [
+    "./commands/commit.md",
+    "./commands/apidoc.md"
+  ],
+  "mcpServers": "./.mcp.json"
+}
