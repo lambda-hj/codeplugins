@@ -20,15 +20,14 @@
         "name": "lambda-hj",
         "email": "lambda@example.com"
       },
+
       "homepage": "https://github.com/lambda-hj/codeplugins",
       "repository": "https://github.com/lambda-hj/codeplugins",
       "license": "MIT",
-      "keywords": ["claude-code", "plugin", "workflow", "development", "mcp", "api-docs", "git-commit"],
+      "keywords": ["claude-code", "plugin", "workflow", "development", "mcp"],
       "category": "productivity",
       "tags": ["工作流", "开发工具", "文档生成", "Git工具", "MCP集成"],
-      "source": "./",
-      "commands": ["./commands/commit.md", "./commands/apidoc.md"],
-      "mcpServers": "./.mcp.json",
+      "source": "./pilot",
       "strict": true
     }
   ]

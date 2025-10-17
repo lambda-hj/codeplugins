@@ -12,5 +12,9 @@
     "./commands/commit.md",
     "./commands/apidoc.md"
   ],
+ "agents": [
+    "./agents/prompt-engineer.md",
+    "./agents/review-code.md"
+  ],
   "mcpServers": "./.mcp.json"
 }
