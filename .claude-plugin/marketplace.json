@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "code-workflow-plugins",
+  "name": "codeplugins",
   "version": "1.0.0",
   "description": "增强代码开发工作流程的插件集合，提供API文档生成、智能提交消息和MCP服务器集成",
   "owner": {
