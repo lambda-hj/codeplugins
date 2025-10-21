@@ -1,13 +1,11 @@
 {
   "mcpServers": {
-    "conntext7": {
+    "exa": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp",
-        "--api-key",
-        "ctx7sk-d346f31d-6369-4b24-9e65-b1e0f5a90688kk"
-      ]
+      "args": ["-y", "exa-mcp-server"],
+      "env": {
+        "EXA_API_KEY": "e8052b68-e65a-4626-bff0-f1e92da481b7"
+      }
     },
     "chrome-devtools": {
       "command": "npx",
@@ -16,10 +14,6 @@
     "sequential-thinking": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "mobile": {
-      "command": "npx",
-      "args": ["-y", "@mobilenext/mobile-mcp@latest"]
     },
     "filesystem": {
       "command": "npx",
