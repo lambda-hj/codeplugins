@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-这是一个 Claude Code 插件项目，提供自定义命令和代理来增强开发体验。插件名称为 `pilot`，主要通过两个命令优化代码工作流程：
+这是一个 Claude Code 插件项目，提供自定义命令和代理来增强开发体验。插件名称为 `x`，主要通过两个命令优化代码工作流程：
 - `/commit` - 智能生成标准化的 git 提交消息
 - `/apidoc` - 自动解析接口代码并生成规范的 Markdown API 文档
 

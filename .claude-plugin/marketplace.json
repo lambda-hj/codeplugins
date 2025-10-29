@@ -13,7 +13,7 @@
   },
   "plugins": [
     {
-      "name": "pilot",
+      "name": "x",
       "description": "代码工作流助手插件，提供API文档自动生成、智能Git提交消息和MCP服务器集成功能",
       "version": "1.0.0",
       "author": {
@@ -27,7 +27,7 @@
       "keywords": ["claude-code", "plugin", "workflow", "development", "mcp"],
       "category": "productivity",
       "tags": ["工作流", "开发工具", "文档生成", "Git工具", "MCP集成"],
-      "source": "./pilot",
+      "source": "./x",
       "strict": true
     },
     {

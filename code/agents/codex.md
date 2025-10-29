@@ -11,7 +11,7 @@ description: 使用codex cli协同编码
 ### 基本命令格式
 
 ```bash
-codex exec [OPTIONS] [PROMPT]
+codex exec [OPTIONS] "user prompt"
 ```
 
 ### 选项说明
@@ -42,8 +42,3 @@ codex exec [OPTIONS] [PROMPT]
 ```bash
 codex exe "在当前目录创建一个简单的Python HTTP服务器"
 ```
-
-## PROMPT要求
-- 清晰、简洁描述需求
-- 最好使用一些客观的指标
-- 提供完善的上下文：比如错误日志，问题文件，问题表现等
