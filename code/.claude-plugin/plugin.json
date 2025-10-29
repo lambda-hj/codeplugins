@@ -1,0 +1,14 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "codex 代码开发助手插件，专注于提供智能编码代理和开发工具",
+  "author": {
+    "name": "lambda-hj",
+    "email": "lambda@example.com"
+  },
+  "license": "MIT",
+  "keywords": ["claude-code", "plugin", "development", "codex", "coding"],
+  "agents": [
+    "./agents/codex.md"
+  ]
+}
