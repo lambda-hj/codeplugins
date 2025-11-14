@@ -2,25 +2,25 @@
 description: "生成规范的git commit msg,并提交打码"
 ---
 
-Your task is to help the user to generate a commit message and commit the changes using git.
 
-## Guidelines
+你的任务是帮助用户生成提交信息并使用git提交更改。
 
-- DO NOT add any ads such as "Generated with [Claude Code](https://claude.ai/code)"
-- Only generate the message for staged files/changes
-- Don't add any files using `git add`. The user will decide what to add. 
-- Follow the rules below for the commit message.
+## 指导原则
 
-## Output Format
+- 不要添加任何广告
+- 只为暂存的文件/更改生成信息
+- 遵循以下提交信息规则。
 
-### Single Type Changes
+## 输出格式
+
+### 单一类型更改
 
 ```
 <emoji> <type>(<scope>): <subject>
   <body>
 ```
 
-### Multiple Type Changes
+### 多种类型更改
 
 ```
 <emoji> <type>(<scope>): <subject>
@@ -31,54 +31,53 @@ Your task is to help the user to generate a commit message and commit the change
 ...
 ```
 
-### Type Reference
+### 类型参考
 
-| Type     | Emoji | Description          | Example Scopes      |
-| -------- | ----- | -------------------- | ------------------- |
-| feat     | ✨    | New feature          | user, payment       |
-| fix      | 🐛    | Bug fix              | auth, data          |
-| docs     | 📝    | Documentation        | README, API         |
-| style    | 💄    | Code style           | formatting          |
-| refactor | ♻️    | Code refactoring     | utils, helpers      |
-| perf     | ⚡️   | Performance          | query, cache        |
-| test     | ✅    | Testing              | unit, e2e           |
-| build    | 📦    | Build system         | webpack, npm        |
-| ci       | 👷    | CI config            | Travis, Jenkins     |
-| chore    | 🔧    | Other changes        | scripts, config     |
-| i18n     | 🌐    | Internationalization | locale, translation |
+| Type     | Emoji | 描述                  | 示例范围            |
+| -------- | ----- | --------------------- | ------------------- |
+| feat     | ✨    | 新功能                | user, payment       |
+| fix      | 🐛    | 错误修复              | auth, data          |
+| docs     | 📝    | 文档                  | README, API         |
+| style    | 💄    | 代码风格              | formatting          |
+| refactor | ♻️    | 代码重构              | utils, helpers      |
+| perf     | ⚡️   | 性能优化              | query, cache        |
+| test     | ✅    | 测试                  | unit, e2e           |
+| build    | 📦    | 构建系统              | webpack, npm        |
+| ci       | 👷    | CI配置                | Travis, Jenkins     |
+| chore    | 🔧    | 其他更改              | scripts, config     |
+| i18n     | 🌐    | 国际化                | locale, translation |
 
-## Writing Rules
+## 编写规则
 
-### Subject Line
+### 主题行
 
-- Scope must be in English
-- Imperative mood
-- No capitalization
-- No period at end
-- Max 50 characters
-- Must be in English
+- 范围必须使用英文
+- 使用祈使语气
+- 不使用大写
+- 结尾不加句号
+- 最多50个字符
+- 必须使用英文
 
-### Body
+### 正文
 
-- Body must be in Chinese
-- Bullet points with "-"
-- Max 72 chars per line
-- Explain what and why
-- Must be in Chinese
-- Use【】for different types
+- 正文必须使用中文
+- 使用"-"的项目符号
+- 每行最多72个字符
+- 解释内容和原因
+- 必须使用中文
+- 对不同类型使用【】
 
-## Critical Requirements
+## 关键要求
 
-1. NO additional text or explanations
-2. NO questions or comments
-3. NO formatting instructions or metadata
-4. DO NOT add any ads such as "Generated with [Claude Code](https://claude.ai/code)"
-5. Only generate the message for staged files/changes
-6. Don't add any files using `git add`. The user will decide what to add. 
+1. 不要添加额外的文本或解释
+2. 不要提问或评论
+3. 不要添加格式说明或元数据
+4. 不要添加任何广告
+5. 只为暂存的文件/更改生成信息
 
-## Examples
+## 示例
 
-INPUT:
+输入：
 
 diff --git a/src/server.ts b/src/server.tsn index ad4db42..f3b18a9 100644n --- a/src/server.tsn +++ b/src/server.tsn @@ -10,7 +10,7 @@n import {n initWinstonLogger();
 n n const app = express();
@@ -90,13 +89,13 @@ n n -app.listen(port, () => {n - console.log(`Server listening on port ${port}`)
 n +app.listen(process.env.PORT || PORT, () => {n + console.log(`Server listening on port ${PORT}`);
 n });
 
-OUTPUT:
+输出：
 
-♻️ refactor(server): optimize server port configuration
+♻️ refactor(server): 优化服务器端口配置
 
-- rename port variable to uppercase (PORT) to follow constant naming convention
-- add environment variable port support for flexible deployment
+- 将port变量重命名为大写(PORT)以遵循常量命名约定
+- 添加环境变量端口支持以实现灵活部署
 
-## Remember
-You are to act as a pure commit message generator. Your response should contain NOTHING but the commit message itself.
-After you generate the commit message, you need to use git commit
+## 记住
+你要扮演一个纯粹的提交信息生成器。你的响应应该只包含提交信息本身。
+生成提交信息后，你需要使用git commit
