@@ -13,7 +13,8 @@
     "./commands/apidoc.md"
   ],
  "agents": [
-    "./agents/prompt-engineer.md",
+    "./agents/linus.md",
+    "./agents/prompt-improver.md",
     "./agents/review-code.md"
   ],
   "mcpServers": "./.mcp.json"
