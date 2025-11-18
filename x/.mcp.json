@@ -4,7 +4,7 @@
       "command": "npx",
       "args": ["-y", "exa-mcp-server"],
       "env": {
-        "EXA_API_KEY": "e8052b68-e65a-4626-bff0-f1e92da481b7"
+        "EXA_API_KEY": "${EXA_API_KEY}"
       }
     },
     "chrome-devtools": {
