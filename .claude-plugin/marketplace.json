@@ -46,6 +46,24 @@
       "tags": ["代码", "开发", "Codex", "编码助手"],
       "source": "./code",
       "strict": true
+    },
+    {
+      "name": "glm",
+      "description": "glm-coding: A Claude plugin for streamlined coding workflows using GLM.",
+      "version": "1.0.0",
+      "author": {
+        "name": "lambda-hj",
+        "email": "lambda@example.com"
+      },
+
+      "homepage": "https://github.com/lambda-hj/codeplugins",
+      "repository": "https://github.com/lambda-hj/codeplugins",
+      "license": "MIT",
+      "keywords": ["claude-code", "glm", "web-search", "vision", "web-reading"],
+      "category": "productivity",
+      "tags": ["GLM", "工作流", "开发工具", "网络搜索", "视觉处理", "网页阅读"],
+      "source": "./glm",
+      "strict": true
     }
   ]
 }

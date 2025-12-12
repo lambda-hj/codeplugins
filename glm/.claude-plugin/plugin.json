@@ -1,0 +1,12 @@
+{
+  "name": "glm",
+  "version": "1.0.0",
+  "description": "glm-coding: A Claude plugin for streamlined coding workflows using GLM.",
+  "author": {
+    "name": "lambda-hj",
+    "email": "lambda@example.com"
+  },
+  "license": "MIT",
+  "keywords": ["claude-code", "glm", "web-search", "vision", "web-reading"],
+  "mcpServers": "./.mcp.json"
+}
